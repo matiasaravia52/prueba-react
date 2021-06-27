@@ -13,9 +13,12 @@ script:
   #- npm run test
   - npm run build
 
+before_deploy:
+  - npm install netlify-cli -g
+
 deploy:
-  provider: heroku
-  api_key: $HEROKU_KEY
-  app: prueba-react
+  provider: script
+  edge: true
+  script: netlify deploy --dir=dist --prod
   on:
-    all_branches: true
+    branche: main
