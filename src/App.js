@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react'
+import { Calculator } from './components/Calculator'
 
 export default function App() {
-    return(<h1>Hola</h1>)
+  return <Calculator />
 }
