@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import sum from '../utils/sum'
+require('./style.css')
 
 export const Calculator = () => {
   const [firstValue, setFirsValue] = useState(0)
@@ -16,7 +17,11 @@ export const Calculator = () => {
     <div>
       <div>
         <div className="mb-3 form-group">
-          <label htmlFor="first-value" className="form-label">
+          <label
+            htmlFor="first-value"
+            className="form-label"
+            className="label-value"
+          >
             Primer valor
           </label>
           <input
@@ -44,7 +49,7 @@ export const Calculator = () => {
         </button>
       </div>
       {result !== 0 && (
-        <div>
+        <div className="resultado">
           <h1>El resultado es: {result}</h1>
         </div>
       )}
